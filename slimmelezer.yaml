@@ -75,6 +75,8 @@ sensor:
       name: "Current Phase 3"
     frequency:
       name: "Frequency"
+    electricity_tariff:
+      name: "Current Tariff"
   - platform: uptime
     name: "SlimmeLezer Uptime"
   - platform: wifi_signal
@@ -85,6 +87,10 @@ text_sensor:
   - platform: dsmr
     identification:
       name: "DSMR Identification"
+    message_long: 
+      name: "Long message"
+    breaker_status: 
+      name: "Breaker status"
   - platform: wifi_info
     ip_address:
       name: "SlimmeLezer IP Address"

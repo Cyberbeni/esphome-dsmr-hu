@@ -97,6 +97,9 @@ CONFIG_SCHEMA = cv.Schema(
             unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE_HOURS,
             accuracy_decimals=3,
         ),
+        cv.Optional("electricity_tariff"): sensor.sensor_schema(
+            accuracy_decimals=0,
+        ),
         cv.Optional("power_delivered"): sensor.sensor_schema(
             unit_of_measurement=UNIT_KILOWATT,
             accuracy_decimals=3,

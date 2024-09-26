@@ -151,6 +151,9 @@ constexpr char reactive_power_returned::name[];
 constexpr ObisId electricity_tariff::id;
 constexpr char electricity_tariff::name[];
 
+constexpr ObisId breaker_status::id;
+constexpr char breaker_status::name[];
+
 constexpr ObisId power_delivered::id;
 constexpr char power_delivered::name[];
 
