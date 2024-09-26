@@ -87,8 +87,6 @@ text_sensor:
   - platform: dsmr
     identification:
       name: "DSMR Identification"
-    message_long: 
-      name: "Long message"
     breaker_status: 
       name: "Breaker status"
   - platform: wifi_info
