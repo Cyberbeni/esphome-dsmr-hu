@@ -1,9 +1,11 @@
 esphome:
   name: slimmelezer
   friendly_name: SlimmeLezer+
-  platform: ESP8266
-  esp8266_restore_from_flash: true
+
+esp8266:
+  restore_from_flash: true
   board: d1_mini
+
 external_components:
   - source: github://cyberbeni/esphome-dsmr-hu@v1
     components: [dsmr]
