@@ -91,13 +91,14 @@ text_sensor:
       name: "DSMR Identification"
     breaker_status: 
       name: "Breaker status"
-    telegram::
-      name: "telegram"
-      disabled_by_default: true
-      on_value:
-        then:
-          - lambda: |-
-              ESP_LOGI("dsmr", "telegram is %s", x.c_str());
+# This seems to break the whole system with Sanxing SX631
+#    telegram:
+#      name: "telegram"
+#      disabled_by_default: true
+#      on_value:
+#        then:
+#          - lambda: |-
+#              ESP_LOGI("dsmr", "telegram is %s", x.c_str());
   - platform: wifi_info
     ip_address:
       name: "SlimmeLezer IP Address"
