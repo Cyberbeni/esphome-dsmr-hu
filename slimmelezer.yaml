@@ -77,6 +77,10 @@ sensor:
       name: "Current Phase 3"
     frequency:
       name: "Frequency"
+    total_imported_energy:
+      name: "Reactive Energy Consumed"
+    total_exported_energy:
+      name: "Reactive Energy Produced"
     electricity_tariff:
       name: "Current Tariff"
   - platform: uptime
