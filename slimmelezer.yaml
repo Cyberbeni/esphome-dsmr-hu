@@ -20,9 +20,12 @@ wifi:
 
 logger:
   baud_rate: 0
-  # The whole telegram message is logged at DEBUG level
+  tx_buffer_size: 3100
   logs:
-    dsmr: INFO
+    sensor: INFO
+    text_sensor: INFO
+    # Uncomment to turn off telegram message logging
+#    dsmr: INFO
 api:
 ota:
   platform: esphome
