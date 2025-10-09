@@ -181,7 +181,7 @@ void Dsmr::receive_telegram_() {
     if (this->footer_found_ && c == '\n') {
       // Log the complete raw telegram for debugging.
       // Use precision specifier to avoid relying on NUL termination.
-      ESP_LOGVV(TAG, "Telegram: %.*s", static_cast<int>(this->bytes_read_), this->telegram_);
+      ESP_LOGD(TAG, "Telegram: %.*s", static_cast<int>(this->bytes_read_), this->telegram_);
       // Parse the telegram and publish sensor values.
       this->parse_telegram();
       this->reset_telegram_();
@@ -246,7 +246,7 @@ void Dsmr::receive_encrypted_telegram_() {
 
     this->bytes_read_ = strnlen(this->telegram_, this->max_telegram_len_);
     ESP_LOGV(TAG, "Decrypted telegram size: %d bytes", this->bytes_read_);
-    ESP_LOGVV(TAG, "Decrypted telegram: %s", this->telegram_);
+    ESP_LOGD(TAG, "Decrypted telegram: %s", this->telegram_);
 
     // Parse the decrypted telegram and publish sensor values.
     this->parse_telegram();

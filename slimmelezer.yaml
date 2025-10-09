@@ -20,9 +20,9 @@ wifi:
 
 logger:
   baud_rate: 0
-  level: INFO
+  # The whole telegram message is logged at DEBUG level
   logs:
-    dsmr: VERY_VERBOSE
+    dsmr: INFO
 api:
 ota:
   platform: esphome
